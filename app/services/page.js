@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Placeholder from "@/components/Placeholder";
-import { services } from "@/lib/site";
+import { services, photos, img } from "@/lib/site";
 
 export const metadata = {
   title: "Gold Work, Glass Work Painting & Glass Paintings for Jain Temples",
@@ -19,7 +19,7 @@ export default function Services() {
       {services.map((s, i) => (
         <section id={s.id} key={s.id} className={i % 2 ? "alt-bg" : undefined}>
           <div className="wrap two">
-            <Placeholder shape="wide" label={`IMAGE: ${s.name}`} />
+            <Placeholder shape="wide" label={`${s.name} by Jain Glass Arts`} src={img(photos.services[s.id])} />
             <div>
               <h2>{s.name}</h2>
               <p>{s.text}</p>

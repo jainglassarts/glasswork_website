@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Placeholder from "@/components/Placeholder";
-import { site } from "@/lib/site";
+import { site, photos, img } from "@/lib/site";
 
 export const metadata = {
   title: "About Us: Hereditary Jain Temple Glass Artisans",
@@ -25,7 +25,7 @@ export default function About() {
           <p>[2–3 paragraphs about the family history, the first temple project, how the craft has been carried forward, and the values the team works by: devotion, purity of materials and respect for Jain shastra.]</p>
           <p>[Notable temples, awards or recognitions.]</p>
         </div>
-        <Placeholder shape="tall" label="IMAGE: Founder / family photo" />
+        <Placeholder shape="tall" label="Founder of Jain Glass Arts in a glass-work temple" src={img(photos.artisan2)} />
       </div></section>
 
       <section className="alt-bg"><div className="wrap">

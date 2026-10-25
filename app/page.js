@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Placeholder from "@/components/Placeholder";
 import JsonLd from "@/components/JsonLd";
-import { site, services, faqs } from "@/lib/site";
+import GridMotion from "@/components/GridMotion";
+import { site, services, faqs, photos, img } from "@/lib/site";
 
 export const metadata = { alternates: { canonical: "/" } };
 
@@ -21,18 +22,15 @@ export default function Home() {
         mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
       }} />
 
-      <div className="wrap hero">
-        <div>
-          <p className="eyebrow">{site.tagline}</p>
-          <h1>Jain Temple Glass Work, Crafted with Devotion</h1>
-          <p className="lead">We create shimmering glass and mirror interiors for Jain derasars, mandirs and home temples: gold work, glass work painting, glass paintings and kanch ka kaam, made by hand in the tradition of India&apos;s great glass temples.</p>
-          <div className="ctas">
-            <Link className="btn" href="/contact/">Get a Free Consultation</Link>
-            <Link className="btn alt" href="/gallery/">View Our Work</Link>
-          </div>
+      <GridMotion items={photos.heroGrid.map(img)}>
+        <p className="eyebrow">{site.tagline}</p>
+        <h1>Jain Temple Glass Work, Crafted with Devotion</h1>
+        <p className="lead">We create shimmering glass and mirror interiors for Jain derasars, mandirs and home temples: gold work, glass work painting, glass paintings and kanch ka kaam, made by hand in the tradition of India&apos;s great glass temples.</p>
+        <div className="ctas">
+          <Link className="btn" href="/contact/">Get a Free Consultation</Link>
+          <Link className="btn alt" href="/gallery/">View Our Work</Link>
         </div>
-        <Placeholder shape="tall" label="HERO IMAGE: glass-work temple interior (portrait)" />
-      </div>
+      </GridMotion>
 
       <section className="alt-bg"><div className="wrap stats">
         <div><strong>[XX]+</strong>Years of craft</div>
@@ -47,7 +45,7 @@ export default function Home() {
         <div className="grid">
           {featured.map((s) => (
             <div className="card" key={s.id}>
-              <Placeholder label={`IMAGE: ${s.short}`} />
+              <Placeholder label={s.name} src={img(photos.services[s.id])} />
               <h3>{s.short}</h3>
               <p>{blurbs[s.id]}</p>
               <Link href={`/services/#${s.id}`}>Learn more →</Link>
@@ -57,7 +55,7 @@ export default function Home() {
       </div></section>
 
       <section className="alt-bg"><div className="wrap two">
-        <Placeholder shape="wide" label="IMAGE: Artisan at work" />
+        <Placeholder shape="wide" label="Jain Glass Arts artisan with gold work on marble" src={img(photos.artisan)} />
         <div>
           <p className="eyebrow">Why choose us</p>
           <h2>Tradition, Shastra &amp; Craftsmanship</h2>
@@ -90,7 +88,7 @@ export default function Home() {
         <div className="grid">
           {[1, 2, 3].map((n) => (
             <div className="card" key={n}>
-              <Placeholder label={`IMAGE: Project ${n}`} />
+              <Placeholder label={`Temple project ${n} by Jain Glass Arts`} src={img(photos.projects[n - 1])} />
               <h3>[Temple Name], [City]</h3>
               <p>[Short description of scope, e.g. full sanctum glass work, 2,000 sq ft].</p>
             </div>

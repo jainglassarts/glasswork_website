@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Placeholder from "@/components/Placeholder";
 import JsonLd from "@/components/JsonLd";
-import { site } from "@/lib/site";
+import { site, photos, img } from "@/lib/site";
 
 const title = "Jain Temple Glass Work: History, Techniques & Famous Kanch Mandirs";
 
@@ -22,7 +22,7 @@ export default function Guide() {
       <p className="crumbs"><Link href="/">Home</Link> › Guide</p>
       <article className="prose">
         <h1>{title}</h1>
-        <Placeholder shape="wide" label="IMAGE: Guide cover" />
+        <Placeholder shape="wide" label="Kanch ka kaam glass mosaic ceiling in a Jain temple" src={img(photos.guide)} />
         <p>Glass work, or <em>kanch ka kaam</em>, is one of the most striking forms of Jain temple art. When lamp light falls on thousands of mirror and glass pieces, the whole sanctum glows. This guide explains where the tradition comes from, the main techniques, and how to plan glass work for your own derasar.</p>
 
         <h2>A short history</h2>
