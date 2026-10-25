@@ -5,12 +5,12 @@ import { site, services, faqs } from "@/lib/site";
 
 export const metadata = { alternates: { canonical: "/" } };
 
-const featured = services.filter((s) => ["kanch", "thikri", "painted", "ghar"].includes(s.id));
+const featured = services.filter((s) => ["gold", "painted", "paintings", "kanch"].includes(s.id));
 const blurbs = {
   kanch: "Full glass-mosaic interiors for walls, ceilings, domes and pillars, in the style of Kanch Mandir.",
-  thikri: "Hand-cut mirror pieces set in intricate floral and geometric patterns, a Rajasthani tradition.",
+  gold: "Gold-leaf and gold-paint detailing that makes the sanctum, parikar and ceilings glow.",
   painted: "Scenes from the lives of the Tirthankaras, Jain cosmology and Kalpasutra stories painted on glass.",
-  ghar: "Custom glass and mirror home temples sized for apartments and bungalows.",
+  paintings: "Framed hand-painted glass artworks of Tirthankaras and sacred scenes for temples, homes and gifting.",
 };
 
 export default function Home() {
@@ -23,9 +23,9 @@ export default function Home() {
 
       <div className="wrap hero">
         <div>
-          <p className="eyebrow">{site.brand} · Since {site.since}</p>
+          <p className="eyebrow">{site.tagline}</p>
           <h1>Jain Temple Glass Work, Crafted with Devotion</h1>
-          <p className="lead">We create shimmering glass and mirror interiors for Jain derasars, mandirs and home temples: kanch ka kaam, thikri inlay, painted glass and meenakari, made by hand in the tradition of India&apos;s great glass temples.</p>
+          <p className="lead">We create shimmering glass and mirror interiors for Jain derasars, mandirs and home temples: gold work, glass work painting, glass paintings and kanch ka kaam, made by hand in the tradition of India&apos;s great glass temples.</p>
           <div className="ctas">
             <Link className="btn" href="/contact/">Get a Free Consultation</Link>
             <Link className="btn alt" href="/gallery/">View Our Work</Link>

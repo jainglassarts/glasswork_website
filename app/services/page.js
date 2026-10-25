@@ -3,8 +3,8 @@ import Placeholder from "@/components/Placeholder";
 import { services } from "@/lib/site";
 
 export const metadata = {
-  title: "Jain Temple Glass Work Services: Kanch, Thikri, Painted Glass",
-  description: "Kanch ka kaam glass mosaic, thikri mirror inlay, painted glass panels, meenakari, ghar derasar and restoration of old glass temples for Jain derasars.",
+  title: "Gold Work, Glass Work Painting & Glass Paintings for Jain Temples",
+  description: "Gold work, glass work painting, glass paintings, kanch ka kaam, thikri mirror inlay, ghar derasar and restoration of old glass temples for Jain derasars.",
   alternates: { canonical: "/services/" },
 };
 

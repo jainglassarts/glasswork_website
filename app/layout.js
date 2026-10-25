@@ -6,8 +6,8 @@ import { site } from "@/lib/site";
 
 export const metadata = {
   metadataBase: new URL(site.url + "/"),
-  title: { default: `Jain Temple Glass Work & Kanch Ka Kaam Artisans | ${site.name}`, template: `%s | ${site.name}` },
-  description: "Master artisans of Jain temple glass work: kanch ka kaam, thikri mirror inlay, painted glass and meenakari for derasars, mandirs and ghar derasar across India.",
+  title: { default: `Jain Temple Gold Work, Glass Painting & Glass Work | ${site.name}`, template: `%s | ${site.name}` },
+  description: "Master artisans of Jain temple glass work: gold work, glass work painting, glass paintings and kanch ka kaam for derasars, mandirs and ghar derasar across India.",
   openGraph: { type: "website", siteName: site.name, images: ["/og-cover.jpg"] },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
@@ -19,7 +19,7 @@ const business = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: `${site.name} Jain Temple Glass Art`,
-  description: "Traditional Jain temple glass work: kanch ka kaam, thikri mirror inlay, painted glass and meenakari for derasars and mandirs.",
+  description: "Traditional Jain temple glass work: gold work, glass work painting, glass paintings and kanch ka kaam for derasars and mandirs.",
   url: site.url + "/",
   telephone: site.phone,
   email: site.email,

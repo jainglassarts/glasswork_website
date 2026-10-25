@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header>
       <nav className="nav wrap" aria-label="Main">
-        <Link className="logo" href="/">{site.name} <span>{site.brand}</span></Link>
+        <Link className="logo" href="/">Jain Glass <span>Arts</span></Link>
         <button className="menu-btn" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>☰</button>
         <ul className={open ? "open" : ""}>
           {links.map(([href, label]) => (

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Placeholder from "./Placeholder";
 import { gallery, services } from "@/lib/site";
 
-const filters = [["all", "All"], ...services.filter((s) => s.id !== "meenakari").map((s) => [s.id, s.short])];
+const filters = [["all", "All"], ...services.map((s) => [s.id, s.short])];
 
 export default function GalleryGrid() {
   const [f, setF] = useState("all");

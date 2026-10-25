@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="grid">
             <div><h3>{site.name}</h3><p>Traditional glass and mirror artistry for Jain derasars, mandirs and home temples since {site.since}.</p></div>
             <div><h3>Services</h3><ul>
-              <li><Link href="/services/#kanch">Kanch ka kaam (glass mosaic)</Link></li>
-              <li><Link href="/services/#thikri">Thikri mirror inlay</Link></li>
-              <li><Link href="/services/#painted">Painted glass panels</Link></li>
+              <li><Link href="/services/#gold">Gold work</Link></li>
+              <li><Link href="/services/#painted">Glass work painting</Link></li>
+              <li><Link href="/services/#paintings">Glass paintings</Link></li>
               <li><Link href="/services/#restoration">Restoration</Link></li>
             </ul></div>
             <div><h3>Contact</h3><ul>
